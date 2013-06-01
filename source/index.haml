@@ -1,9 +1,28 @@
 ---
-title: "Chubbs Rocks!"
+title: HarmonEye
 name: "index"
+layout: layout
 ---
-- content_for :head do
-	:javascript
-		// do stuff
+.container
+  .intro.row.span12
+    .illustration.span7
+      .mac-screenshot
+        =image_tag('harmoneye-e-major-7.png')
+    .description.span4
+      %h1.logo HarmonEye
+      
+      %h2 See what you hear!
+      
+      %p <i class="icon-eye-open"></i> What looks like a retina of an eye is a unique software application that listens to the <strong>music</strong> and shows you the <strong>tones</strong> and <strong>chords</strong> being played. From <strong>any audio</strong>. In <strong>real-time</strong>.
 
-= render_partial "partials/hero"
+      :markdown
+      
+        With HarmonEye you can explore the amazing world of music **visually**. By "giving you **absolute pitch**" it helps you **transcribe** the melody and the chords of your favorite tunes more easily. You can see the **patterns in music** and so better **understand** the **harmony** or just **enjoy** new **insights** to the music.
+
+      %p.buttons
+        %a.btn.btn-primary.btn-large{:href => "learn-more"}
+          %i.icon-music.icon-white
+          Learn more
+        %a.btn.btn-success.btn-large{:href => "buy"}
+          %i.icon-heart.icon-white
+          Buy

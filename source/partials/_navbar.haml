@@ -1,12 +1,29 @@
 .navbar.navbar-fixed-top
-	.navbar-inner
-		.container
-			%a.brand(href="#") Chubbs Middleman template
-			.nav-collapse
-				%ul.nav
-					%li{:class => data.page.name == 'index' ? 'active' : ''}
-						%a(href="/") Home
-					%li{:class => data.page.name == 'twocolumns' ? 'active' : ''}
-						%a(href="twocolumns") Two Columns Layout
-					%li{:class => data.page.name == 'contact' ? 'active' : ''}
-						%a(href="contact") Contact
+  .navbar-inner
+    .container
+      %a.brand.logo(href="/")
+        HarmonEye
+      .nav-collapse
+        %ul.nav.pull-right
+          %li{:class => data.page.name == 'index' ? 'invisible' : ''}
+            %a(href="/")
+              %i.icon-home
+              Home
+          %li{:class => data.page.name == 'learn-more' ? 'active' : ''}
+            %a(href="learn-more")
+              %i.icon-music
+              Learn more
+          %li{:class => data.page.name == 'download' ? 'active' : ''}
+            %a(href="download")
+              %i.icon-download-alt
+              Download
+          %li{:class => data.page.name == 'buy' ? 'active' : ''}
+            %a(href="buy")
+              %i.icon-heart
+              Buy
+          /%li{:class => data.page.name == 'blog' ? 'active' : ''}
+          /  %a(href="blog") Blog
+          %li{:class => data.page.name == 'about' ? 'active' : ''}
+            %a(href="about")
+              %i.icon-user
+              About
