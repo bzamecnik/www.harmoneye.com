@@ -1,5 +1,5 @@
 // I gather this file is a starting point for the project.
-@import "compass"
+//@import "compass"
 
 // Use this file to override 
 @import "variables"
@@ -12,9 +12,15 @@
 
 //@import "helpers/bootstrap-helpers"
 
+@import "helpers/bootstrap-buttons"
+
 body
   padding-top: 60px
   padding-bottom: 0
+
+$violet: #e71673
+$orangered: #ed4b22
+$yellowgreen: #8cc000
 
 //h1, h2, h3, h4, h5, h6
 //  font-family: 'Vollkorn', serif
@@ -23,16 +29,24 @@ body
   font-family: 'Lobster', 'Helvetica Neue', sans-serif
 
 .intro
-  h1
-    font-size: 400%
-  h2
-    font-family: 'Helvetica Neue', sans-serif
-    font-weight: 200
-    color: #666
-    font-size: 2em
-    margin: 0.75em 0 0.25em 0
   .description
     margin-top: 35px
+    h1
+      font-size: 400%
+      margin-right: -30px
+      .logo
+        text-shadow: 3px 3px 20px #ccc
+      .label
+        display: inline-block
+        top: -25px
+        left: -10px
+        background-color: $orangered
+    h2
+      font-family: 'Helvetica Neue', sans-serif
+      font-weight: 200
+      color: #666
+      font-size: 2em
+      margin: 0.75em 0 0.25em 0
     p
       font-size: 120%
       line-height: 130%
@@ -54,13 +68,61 @@ body
       img
         display: none
 
+.navbar
+  a:hover
+    color: #666
+    i
+      color: $yellowgreen
+
 footer
-  background: #333333
+  background: #333
   color: #cccccc
-  padding: 20px 0 100px 0
+  margin-top: 3c0px
+  padding-bottom: 50px
+  border-top: 10px solid $yellowgreen
+  @include box-shadow(0 0 25px rgba(0,0,0,0.25))
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2)
   a
     color: #cccccc
   a:hover
     color: #ffffff
     background: inherit
+  ul
+    list-style-type: none
+    margin-left: 0
+  .about
+    a
+      color: $yellowgreen
+  .headings
+    background: #3c3c3c
+    margin-bottom: 10px
+    color: #eee
+    h3
+      font-size: 16px
+      margin: 0
 
+.tagline
+  margin: 20px 0
+  background: #333
+  //border-bottom: 10px solid $violet
+  color: #ccc
+  .container
+    padding: 20px 0
+  blockquote
+    //border-color: $violet
+    border: 0
+    i
+      color: $violet
+      margin-left: -1.3em
+    p
+      font-size: 30px
+    small
+      font-size: 15px
+
+#features
+  margin-top: -50px
+  padding-top: 50px
+  display: block
+
+.feature
+  margin: 40px 0

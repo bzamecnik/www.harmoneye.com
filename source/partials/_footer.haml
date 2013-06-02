@@ -1,8 +1,51 @@
 %footer
+  .headings
+    .container
+      .row
+        .span2
+          %h3 Site
+        .span2
+          %h3 Social
+        .span5
+          %h3
+            %i.icon-twitter
+            Tweets
+        .span3.about
+          %h3 About
   .container
-    %p
-      %i.icon-heart.icon-white
-      Handcrafted with love by
-      %strong
-        =link_to('Bohumír Zámečník', '/about.html', :relative => true)
-      in Prague, Czech Republic.
+    .row
+      .span2
+        %ul
+          %li
+            %i.icon-home
+            =link_to 'Home', 'index.html'
+          %li
+            %i.icon-music
+            =link_to 'Learn more', 'learn-more.html'
+          %li
+            %i.icon-download-alt
+            =link_to 'Download', 'download.html'
+          %li
+            %i.icon-shopping-cart
+            =link_to 'Buy', 'buy.html'
+          %li
+            %i.icon-user
+            =link_to 'About', 'about.html'
+      .span2
+        %ul
+          %li
+            =link_to 'Twitter', 'https://twitter.com/HarmonEye'
+          %li
+            =link_to 'YouTube', 'http://www.youtube.com/user/HarmonEyeApp'
+      .span4
+        / %h3 Tweets
+        <a class="twitter-timeline" href="https://twitter.com/HarmonEye" data-widget-id="326397702822821888" data-tweet-limit="3" data-chrome="noheader nofooter transparent" data-theme="dark" data-link-color="#8cc000">Tweets by @HarmonEye</a>
+        / <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      .about.span3.offset1
+        %p
+          Handcrafted<br>
+          with <i class="icon-heart"><span class="hide">love</span></i> and passion<br>
+          by
+          =link_to('Bohumír Zámečník', '/about.html', :relative => true)
+          <br>in Prague, Czech Republic.

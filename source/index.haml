@@ -4,25 +4,71 @@ name: "index"
 layout: layout
 ---
 .container
-  .intro.row.span12
+  .intro.row
     .illustration.span7
-      .mac-screenshot
-        =image_tag('harmoneye-e-major-7.png')
+      %a{:href => "#features"}
+        .mac-screenshot
+          =image_tag('harmoneye-e-major-7.png')
     .description.span4
-      %h1.logo HarmonEye
+      %h1
+        %span.logo HarmonEye
+        %sup.label BETA
+
+      %h2 <i class="icon-eye-open"></i> See what you hear!
       
-      %h2 See what you hear!
-      
-      %p <i class="icon-eye-open"></i> What looks like a retina of an eye is a unique software application that listens to the <strong>music</strong> and shows you the <strong>tones</strong> and <strong>chords</strong> being played. From <strong>any audio</strong>. In <strong>real-time</strong>.
+      %p What looks like a retina of an eye is a unique software application that listens to the <strong>music</strong> and shows you the <strong>tones</strong> and <strong>chords</strong> being played. From <strong>any audio</strong>. In <strong>real-time</strong>.
 
       :markdown
       
         With HarmonEye you can explore the amazing world of music **visually**. By "giving you **absolute pitch**" it helps you **transcribe** the melody and the chords of your favorite tunes more easily. You can see the **patterns in music** and so better **understand** the **harmony** or just **enjoy** new **insights** to the music.
 
       %p.buttons
-        %a.btn.btn-primary.btn-large{:href => "learn-more"}
-          %i.icon-music.icon-white
-          Learn more
-        %a.btn.btn-success.btn-large{:href => "buy"}
+        %a.btn.btn-primary.btn-large{:href => "#features"}
+          Get started
+        %a.btn.btn-buy.btn-large{:href => "buy"}
           %i.icon-heart.icon-white
           Buy
+
+%a{:name => "features", :id => "features"}
+
+.tagline
+  .container
+    .row
+      .offset1.span8
+        %blockquote
+          %p
+            %i.icon-quote-left
+            This is the answer to all my questions.
+          %small A musician who randomly met me in the Prague metro.
+
+.container
+  .feature
+    %h2 What HarmonEye does?
+    .row
+      %p.span6
+        =lorem.paragraph
+      %p.span6
+        / =image_tag lorem.image('300x200')
+
+  .feature
+    %h2 How can HarmonEye help me?
+    .row
+      %p.span6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      %p.span6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  .feature
+    %h2 Who might benefit from HarmonEye?
+    .row
+      %p.span6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      %p.span6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    .feature
+      %h2 How can I get HarmonEye?
+      .row
+        %p.span6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        %p.span6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  //%h2 Sign up for the newsletter
+  // %p Be among the first to know about upcoming features and releases.
+  // %input placeholer => "Enter your email address"
+  // submit button
