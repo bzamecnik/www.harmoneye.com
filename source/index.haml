@@ -6,7 +6,7 @@ layout: layout
 .container
   .intro.row
     .illustration.span7
-      %a{:href => "#features"}
+      %a{:href => "#features", :title => 'Get started and learn more...'}
         .mac-screenshot
           =image_tag('harmoneye-e-major-7.png')
     .description.span4
@@ -14,18 +14,21 @@ layout: layout
         %span.logo HarmonEye
         %sup.label BETA
 
-      %h2 <i class="icon-eye-open"></i> See what you hear!
+      %h2
+        %i.icon-eye-open
+        See what you hear!
       
-      %p What looks like a retina of an eye is a unique software application that listens to the <strong>music</strong> and shows you the <strong>tones</strong> and <strong>chords</strong> being played. From <strong>any audio</strong>. In <strong>real-time</strong>.
-
+      // Sem by slo supnout carousel, ktery by opakovat hlavni fraze z features.
       :markdown
+        What looks like a retina of an eye is a unique software application that listens to the **music** and shows you the **tones** and **chords** being played.
       
-        With HarmonEye you can explore the amazing world of music **visually**. By "giving you **absolute pitch**" it helps you **transcribe** the melody and the chords of your favorite tunes more easily. You can see the **patterns in music** and so better **understand** the **harmony** or just **enjoy** new **insights** to the music.
+        From **any audio**. In **real-time**.
 
       %p.buttons
         %a.btn.btn-primary.btn-large{:href => "#features"}
           Get started
-        %a.btn.btn-buy.btn-large{:href => "buy"}
+          %i.icon-chevron-right.icon-white
+        %a.btn.btn-buy.btn-large{:href => "#buy"}
           %i.icon-heart.icon-white
           Buy
 
@@ -37,36 +40,154 @@ layout: layout
       .offset1.span8
         %blockquote
           %p
-            %i.icon-quote-left
+            %i.icon-quote-left.icon-white
             This is the answer to all my questions.
           %small A musician who randomly met me in the Prague metro.
 
 .container
+  .feature.what-it-does
+    %h2
+      What HarmonEye does?
+      %em
+        %i.icon-eye-open
+        See what you hear!
+    .row.illustration.vertical-space
+      .text-center
+        .span4
+          .item
+            %i.icon-volume-up.icon-4x
+          .item
+            %i.icon-microphone.icon-4x
+          .item
+            %i.icon-headphones.icon-4x
+          .item.text guitar
+          .item.text voice
+          .item.text YouTube
+          .item
+            %i.icon-ellipsis-horizontal.icon-4x
+        .span1.middle
+          %i.icon-arrow-right.icon-2x
+        .span2
+          %i.icon-laptop.icon-4x
+          .screenshot-small
+            =image_tag('harmoneye-e-major-7.png')
+        .span1.middle
+          %i.icon-arrow-right.icon-2x
+        .span3
+          .item
+            %i.icon-eye-open.icon-4x
+          .clearfix
+          .item.text tones
+          .item
+            %i.icon-music.icon-4x
+          .item.text chords
+          .item
+            %i.icon-pencil.icon-4x
+    .row.clearfix
+      .span4
+        :markdown
+          HarmonEye is a unique software **application** that listens to the **music**, applies some deep math under the hood and shows you the **tones** and **chords** being played.
+          
+          It is able to process **any audio** on your computer. It works in **real-time** so that you don't have to wait.
+      .span4
+        :markdown
+          The **intensity** of each **tone** in an octave is shown as a segment of a **circle** (like on the clock). A loud tone makes a long red segment. Multiple tones makes a **chord**.
+          
+          As the music plays the circle is animated.
+          
+          In fact, it looks like a retina of an **eye**!
+      .span4
+        :markdown
+          From that you can easily see the **melody**, **chords** and the **key** of your favourite songs. Including the nuances like a singer’s vibrato.
+          
+          You can **write** it down. Or just **look** at it for hours and be **amazed** like me!
+        %a.btn.btn-primary.btn-large.pull-right{:href => "/learn-more"}
+          Learn more
+          %i.icon-chevron-right.icon-white
   .feature
-    %h2 What HarmonEye does?
-    .row
-      %p.span6
-        =lorem.paragraph
-      %p.span6
-        / =image_tag lorem.image('300x200')
+    %h2
+      How can HarmonEye help me?
+      %em.alt
+        %i.icon-music
+        Absolute pitch for everyone!
+    .row.how-can-it-help.vertical-space
+      .span3
+        :markdown
+          With HarmonEye you can explore the amazing world of music **visually**. By "giving you **absolute pitch**" it helps you **transcribe** the melody and the chords of your favorite tunes more easily.
+      .span3
+        :markdown
+          You can see the **patterns in music** and so better **understand** the **harmony** or just **enjoy** new **insights** to the music.
+      .span6
+        .row.text-center.illustration
+          .span2
+            %i.icon-magic.icon-4x
+          .span2.middle
+            %i.icon-arrow-right.icon-2x
+          .span2
+            %i.icon-group.icon-4x
+        .row
+          .span6
+            %a.btn.btn-primary.btn-large.pull-right{:href => "/learn-more"}
+              Learn more
+              %i.icon-chevron-right.icon-white
+  .feature.who-benefits
+    %h2
+      Who might benefit from HarmonEye?
+      %em
+        %i.icon-heart
+        All music lovers.
+    .row.vertical-space
+      .span3
+        :markdown
+          Whether you're an **amateur** or an **professional**, a **musician** or a **listener**, child or grown-up, HarmonEye might help you.
+      .span1.text-center.lightbulb
+        %i.icon-lightbulb.icon-4x
+      .span4
+        %p To understand the principles you don't even need to know anything about notes. On the other hand if you know the music theory you might get deeper insights.
+      .span4
+        :markdown
+          In fact, by treating the things **visually**, you might even **comprehend** a lot of from the music theory naturally while **avoiding** eg. the **complexity** of the standard notation.
+        %a.btn.btn-primary.btn-large.pull-right{:href => "/learn-more"}
+          Learn more
+          %i.icon-chevron-right.icon-white
 
-  .feature
-    %h2 How can HarmonEye help me?
+  %a{:name => "buy", :id => "buy"}
+  .feature.how-to-get-it
+    %h2
+      How can I get HarmonEye?
+      %em.alt
+        Enjoy and support a good thing.
     .row
-      %p.span6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      %p.span6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .span4
+        :markdown
+          A good way to get HarmonEye running on your system is to **<a href="download">download</a>** the installer and **<a href="buy">buy the license</a>** in order to activate it.
+          
+          For a few bucks that you might spend on a single party night it will allow you to use HarmonEye until the end of days.
+          
+          Note that presently HarmonEye is available **only** for **Mac OS X** desktop.
+        .text-center
+          %i.icon-desktop.icon-4x.computer-icon
+          %i.icon-laptop.icon-4x.computer-icon
+        %p Why HarmonEye is not free, open-source, for mobiles or other patforms? I'd love it too!
+      .span4
+        :markdown
+          Well, there is just a single person speding nights on crafting this thing who needs something to eat.
+          
+          Every buck made goes directly to making HarmonEye better!
 
-  .feature
-    %h2 Who might benefit from HarmonEye?
-    .row
-      %p.span6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      %p.span6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Would you like the software and cannot afford it? Well, I'm not mean. Instead of money you can spend just a bit of time and effort and consequently <a href="/buy/#free-license">get a license for free</a>.
+          
+          Would you like to <a href="/donate/">support the development</a> of HarmonEye in any other way? God bless you! You can.
+          
+          Finally, stay in touch and enjoy!
 
-    .feature
-      %h2 How can I get HarmonEye?
-      .row
-        %p.span6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        %p.span6 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .span4.text-center
+        %a.btn.btn-buy.btn-large{:href => "buy"}
+          =image_tag('harmoneye-e-major-7.png')
+          %i.icon-heart.icon-white
+          %strong Buy it
+          for just a few bucks.
+    
 
   //%h2 Sign up for the newsletter
   // %p Be among the first to know about upcoming features and releases.

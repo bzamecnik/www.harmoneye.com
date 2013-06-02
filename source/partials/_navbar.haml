@@ -13,14 +13,18 @@
             %a(href="learn-more")
               %i.icon-music
               Learn more
-          %li{:class => data.page.name == 'download' ? 'active' : ''}
-            %a(href="download")
-              %i.icon-download-alt
-              Download
           %li{:class => data.page.name == 'buy' ? 'active' : ''}
             %a(href="buy")
               %i.icon-heart
               Buy
+          %li{:class => data.page.name == 'download' ? 'active' : ''}
+            %a(href="download")
+              %i.icon-download-alt
+              Download
+          /%li{:class => data.page.name == 'support' ? 'active' : ''}
+          /  %a(href="support")
+          /    %i.icon-info-sign
+          /    Support
           /%li{:class => data.page.name == 'blog' ? 'active' : ''}
           /  %a(href="blog") Blog
           %li{:class => data.page.name == 'about' ? 'active' : ''}

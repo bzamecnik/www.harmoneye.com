@@ -17,19 +17,19 @@
       .span2
         %ul
           %li
-            %i.icon-home
+            %i.icon-home.icon-white
             =link_to 'Home', 'index.html'
           %li
-            %i.icon-music
+            %i.icon-music.icon-white
             =link_to 'Learn more', 'learn-more.html'
           %li
-            %i.icon-download-alt
-            =link_to 'Download', 'download.html'
-          %li
-            %i.icon-shopping-cart
+            %i.icon-shopping-cart.icon-white
             =link_to 'Buy', 'buy.html'
           %li
-            %i.icon-user
+            %i.icon-download-alt.icon-white
+            =link_to 'Download', 'download.html'
+          %li
+            %i.icon-user.icon-white
             =link_to 'About', 'about.html'
       .span2
         %ul
@@ -45,7 +45,10 @@
       .about.span3.offset1
         %p
           Handcrafted<br>
-          with <i class="icon-heart"><span class="hide">love</span></i> and passion<br>
+          with
+          %i.icon-heart.icon-white
+            %span.hide love
+          and passion<br>
           by
           =link_to('Bohumír Zámečník', '/about.html', :relative => true)
           <br>in Prague, Czech Republic.
