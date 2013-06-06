@@ -6,7 +6,7 @@ layout: layout
 .container
   .intro.row
     .illustration.span7
-      %a{:href => "#features", :title => 'Get started and learn more...'}
+      %a{:href => "#features", :title => 'This is the E maj7 chord. Why? Get started and learn more...'}
         .mac-screenshot
           =image_tag('harmoneye-e-major-7.png')
     .description.span4
@@ -31,8 +31,14 @@ layout: layout
         %a.btn.btn-buy.btn-large{:href => "#buy"}
           %i.icon-heart.icon-white
           Buy
+      .share
+        -# Twitter button
+        <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        -# Facebook button
+        <div class="fb-like" data-href="https://www.facebook.com/HarmonEye" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
 
-%a{:name => "features", :id => "features"}
+%a.fragment{:name => "features", :id => "features"}
 
 .tagline
   .container
@@ -47,42 +53,47 @@ layout: layout
 .container
   .feature.what-it-does
     %h2
-      What HarmonEye does?
+      What does HarmonEye do?
       %em
         %i.icon-eye-open
         See what you hear!
-    .row.illustration.vertical-space
+    .row.illustration
       .text-center
         .span4
           .item
             %i.icon-volume-up.icon-4x
+          .item.text guitar
+          .clearfix
           .item
             %i.icon-microphone.icon-4x
+          .item.text voice
+          .clearfix
           .item
             %i.icon-headphones.icon-4x
-          .item.text guitar
-          .item.text voice
           .item.text YouTube
+          .clearfix
           .item
             %i.icon-ellipsis-horizontal.icon-4x
         .span1.middle
           %i.icon-arrow-right.icon-2x
         .span2
           %i.icon-laptop.icon-4x
-          .screenshot-small
-            =image_tag('harmoneye-e-major-7.png')
+          =image_tag('harmoneye-e-major-7.png')
         .span1.middle
           %i.icon-arrow-right.icon-2x
         .span3
+          .item.text see
           .item
             %i.icon-eye-open.icon-4x
-          .clearfix
           .item.text tones
           .item
             %i.icon-music.icon-4x
           .item.text chords
           .item
             %i.icon-pencil.icon-4x
+          .clearfix
+          .item
+            %i.icon-ellipsis-horizontal.icon-4x
     .row.clearfix
       .span4
         :markdown
@@ -91,7 +102,7 @@ layout: layout
           It is able to process **any audio** on your computer. It works in **real-time** so that you don't have to wait.
       .span4
         :markdown
-          The **intensity** of each **tone** in an octave is shown as a segment of a **circle** (like on the clock). A loud tone makes a long red segment. Multiple tones makes a **chord**.
+          The **intensity** of each **tone** in an octave is shown as a segment of a **circle** (like on the clock). A loud tone makes a long red segment. Multiple tones make a **chord**.
           
           As the music plays the circle is animated.
           
@@ -101,9 +112,11 @@ layout: layout
           From that you can easily see the **melody**, **chords** and the **key** of your favourite songs. Including the nuances like a singer’s vibrato.
           
           You can **write** it down. Or just **look** at it for hours and be **amazed** like me!
-        %a.btn.btn-primary.btn-large.pull-right{:href => "/learn-more"}
-          Learn more
-          %i.icon-chevron-right.icon-white
+        -#%a.btn.btn-primary.btn-large.pull-right{:href => "/learn-more"}
+        -#  Learn more
+        -#  %i.icon-chevron-right.icon-white
+    .row.text-center
+      <iframe width="560" height="315" src="http://www.youtube.com/embed/mStudajyJvo?vq=large" frameborder="0" allowfullscreen></iframe>
   .feature
     %h2
       How can HarmonEye help me?
@@ -127,9 +140,9 @@ layout: layout
             %i.icon-group.icon-4x
         .row
           .span6
-            %a.btn.btn-primary.btn-large.pull-right{:href => "/learn-more"}
-              Learn more
-              %i.icon-chevron-right.icon-white
+            -#%a.btn.btn-primary.btn-large.pull-right{:href => "/learn-more"}
+            -#  Learn more
+            -#  %i.icon-chevron-right.icon-white
   .feature.who-benefits
     %h2
       Who might benefit from HarmonEye?
@@ -139,19 +152,19 @@ layout: layout
     .row.vertical-space
       .span3
         :markdown
-          Whether you're an **amateur** or an **professional**, a **musician** or a **listener**, child or grown-up, HarmonEye might help you.
+          Whether you're an **amateur** or an **professional**, a **musician** or a **listener**, a student or a teacher, HarmonEye might help you.
       .span1.text-center.lightbulb
         %i.icon-lightbulb.icon-4x
       .span4
         %p To understand the principles you don't even need to know anything about notes. On the other hand if you know the music theory you might get deeper insights.
       .span4
         :markdown
-          In fact, by treating the things **visually**, you might even **comprehend** a lot of from the music theory naturally while **avoiding** eg. the **complexity** of the standard notation.
-        %a.btn.btn-primary.btn-large.pull-right{:href => "/learn-more"}
-          Learn more
-          %i.icon-chevron-right.icon-white
+          In fact, by treating the things **visually**, you might even **comprehend** things from the music theory naturally while **avoiding** eg. the artificial **complexity** of the standard notation.
+        -#%a.btn.btn-primary.btn-large.pull-right{:href => "/learn-more"}
+        -#  Learn more
+        -#  %i.icon-chevron-right.icon-white
 
-  %a{:name => "buy", :id => "buy"}
+  %a.fragment{:name => "buy", :id => "buy"}
   .feature.how-to-get-it
     %h2
       How can I get HarmonEye?
@@ -160,36 +173,60 @@ layout: layout
     .row
       .span4
         :markdown
-          A good way to get HarmonEye running on your system is to **<a href="download">download</a>** the installer and **<a href="buy">buy the license</a>** in order to activate it.
+          A good way to get HarmonEye running on your machine is to **<a href="download">download</a>** the package, install it and **buy the license** in order to activate it.
           
           For a few bucks that you might spend on a single party night it will allow you to use HarmonEye until the end of days.
           
-          Note that presently HarmonEye is available **only** for **Mac OS X** desktop.
+          Note that HarmonEye is presently available **only** for **Mac OS X** desktop.
         .text-center
           %i.icon-desktop.icon-4x.computer-icon
           %i.icon-laptop.icon-4x.computer-icon
-        %p Why HarmonEye is not free, open-source, for mobiles or other patforms? I'd love it too!
+        %p Why HarmonEye is not free, open-source, for mobiles or other platforms? I'd love it to be so, too! It just takes some time and work.
       .span4
-        :markdown
-          Well, there is just a single person speding nights on crafting this thing who needs something to eat.
+        %p Well, there is just a single person spending nights on crafting this thing, who needs something to eat and somewhere to sleep.
           
-          Every buck made goes directly to making HarmonEye better!
+        %p Every buck earned goes directly to making HarmonEye better!
 
-          Would you like the software and cannot afford it? Well, I'm not mean. Instead of money you can spend just a bit of time and effort and consequently <a href="/buy/#free-license">get a license for free</a>.
+        -#%p Would you like the software and cannot afford it? Well, I'm not mean. Instead of money you can spend just a bit of time and effort and consequently <a href="/buy/#free-license">get a license for free</a>.
           
-          Would you like to <a href="/donate/">support the development</a> of HarmonEye in any other way? God bless you! You can.
+        %p Would you like to support the development of HarmonEye in another way? God bless you! You can. Eg. tell your friends, make a video, write a review. Thanks!
           
+        %p
           Finally, stay in touch and enjoy!
 
       .span4.text-center
-        %a.btn.btn-buy.btn-large{:href => "buy"}
+        %a.btn.btn-buy.btn-large{:href => "https://sites.fastspring.com/fairos/instant/harmoneye", :target => "_blank"}
           =image_tag('harmoneye-e-major-7.png')
           %i.icon-heart.icon-white
           %strong Buy it
           for just a few bucks.
-    
 
-  //%h2 Sign up for the newsletter
-  // %p Be among the first to know about upcoming features and releases.
-  // %input placeholer => "Enter your email address"
-  // submit button
+  .well
+    .row
+      .span4
+        %h3
+          %i.icon-rss-sign
+          Stay in touch
+        %p
+          <a href="https://twitter.com/harmoneye" class="twitter-follow-button" data-show-count="false">Follow @harmoneye</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      .span4
+        %p
+          %a.btn.btn-large.btn-success{:href=>"http://eepurl.com/xX1M1", :title => "Opens up a page to subscribe to newslletter - via MailChimp"}
+            %i.icon-envelope.icon-white
+            Notify me via email
+        %p when important things happen from time to time.
+        %p Such as when we make a ground-breaking update or publish some interesting articles on music theory and practice.
+      .span3
+        %p I hate spam as you do. The traffic should be low and you can unsubscribe anytime.
+        %p We trust the <a href="http://mailchimp.com/">MailChimp</a> service.
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/cs_CZ/all.js#xfbml=1";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>

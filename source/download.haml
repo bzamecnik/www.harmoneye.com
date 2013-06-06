@@ -1,30 +1,101 @@
 ---
 title: Download
 name: download
+installer_href: http://repo.harmoneye.com/mac/harmoneye-1.0.pkg
 ---
 
-%p You can download the installation package for your platform and install HarmonEye anytime. In order to run it you need a license. You can easily <a href="/buy/">buy it</a>.
+.row
 
-%p
-  %a.btn.btn-primary.btn-large{:href => "/repo/harmoneye-1.0.pkg"}
-    %i.icon-download-alt.icon-white
-    Download HarmonEye 1.0 for Mac OS X
-  %a.btn.btn-success.btn-large{:href => "/buy/"}
-    %i.icon-shopping-cart.icon-white
-    Buy a license
+  .span8
+
+    %p
+      %a.btn.btn-primary.btn-large{:href => data.page.installer_href}
+        %i.icon-download-alt.icon-white
+        Download HarmonEye 1.0 for Mac OS X
+      %a.btn.btn-success.btn-large{:href => "/#buy"}
+        %i.icon-key.icon-white
+        Buy a license
+
+    %p You can download the installation package for your platform and install HarmonEye anytime. In order to run it you need a license. You can easily <a href="/buy/">buy it</a>.
+
+    %h2
+      %i.icon-cogs
+      How to install?
+
+    .well
+      :markdown
+
+        1. Download the installation package via the link above.
+        1. [Allow installing of unsigned applications outside AppStore.](https://www.my-private-network.co.uk/knowledge-base/apple-related-questions/osx-unsigned-apps.html)
+        1. Open the downloaded `.pkg` file to run the instaler.
+        1. Select the destination folder (usually `/Applications`).
+        1. Complete the installation.
+        1. Run the `HarmonEye` application, eg. via Spotlight.
+        1. Enter the activation key that is sent to you via email after you make the order.
+        1. Enjoy!
+
+  .span4
+    .well
+
+      %h3
+        %i.icon-desktop
+        Platforms
+
+      %p
+        Currently, HarmonEye is available <strong>only for Mac OS X</strong>. Other platforms is planned. The development takes some time, but you can support it.
+        
+      %h3
+        %i.icon-question-sign
+        Questions
+      %p Do you have any problem? If you didn't find an answer on the website or especially in the <a href="#faq" title="Frequently asked questions">FAQ</a>, feel free to ask via the <a href="mailto:harmoneye.app@gmail.com">email support</a>.
+
+%h3
+  %i.icon-volume-up
+  How to capture sound going to headphones/speakers?
+.row
+  .span4
+    :markdown
+      What HarmonEye listens to is the default sound device set in the system `Preferences` -> `Sound` -> `Input`. On a standard Mac it is the microphone or the line input.
+      
+      In case you have an external sound card it could be some of its inputs.
+  .span4
+    :markdown
+      But. The fun begins when you can use _any_ audio input including YouTube music videos, iTunes, GarageBand or anything else.
+      
+      In order words when you route the default system output to the default system input. Mac OS X itself cannot do this, but with a some help it _is_ possible.
+  .span4
+    :markdown
+      What we need is the **<a href="http://cycling74.com/products/soundflower/">Soundflower</a>** application. It consists of a driver that extends the OS kernel and a GUI application to configure how the sound devices should be routed.
+      
+      It is freely available from the creators of the famous Max audio application. Soundflower works nicely on Mountain Lion and some older Mac OS X versions.
+
+.row
+  .span4
+    %p
+      %a.btn.btn-primary.btn-large{:href=>"http://cycling74.com/products/soundflower/"}
+        %i.icon-download-alt.icon-white
+        Download Soundflower (free)
+    %p Installing Soundflower is quite easy. You can just follow a very straightforward video tutorial.
+
+  .span8
   
+    <iframe width="560" height="315" src="http://www.youtube.com/embed/4WU0LR2Iz1I" frameborder="0" allowfullscreen></iframe>
 
-%h2 Supported platforms
+%a.fragment{:name => "faq", :id => "faq"}
+%h2
+  FAQ - Frequently asked questions
 
-%p Currently HarmonEye is available only for Mac OS X. Other platforms is planned. The development takes some time, but you support it!
+.well
+  %h3 Why the application is not yet signed or on App Store?
+  .row
+    .span4
+      %p You don't need to be worried. HarmonEye doesn't contain anything bad inside. I just didn't manage yet to obtain the Developer Account and certificate for the application from Apple. It is quite a non-trivial process. I'm planning to get the the application signed.
+    .span4
+      %p As for distributing via App Store, for now I'm not interested. Having the certificate is a necessary pre-requisite. Also Apple is more than a perfectionist to accepting new applications.
+    .span3
+      %p As a developer you cannot use your own licensing strategy, including free licenses for special purposes, multi-platform licenses, etc.
+      %p Instead I've chosen <a href="http://www.fastspring.com/">FastSpring</a> as the distributor and we'll see. It seems excelent!
 
-%h2 How to install?
-
-:markdown
-
-  1. Download the installation package.
-  1. Allow installing of unsigned applications outside AppStore.
-  1. Open the downloaded `.pkg` file to run the instaler.
-  1. Select the destination folder (usually `/Applications`).
-  1. Complete the installation.
-  1. Run the `HarmonEye` application, eg. via Spotlight.
+.well
+  %h3 Is there any trial version?
+  %p Not now, but it is planned in near future.

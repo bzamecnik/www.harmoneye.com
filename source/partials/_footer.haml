@@ -9,7 +9,7 @@
         .span5
           %h3
             %i.icon-twitter
-            Tweets
+            What's new
         .span3.about
           %h3 About
   .container
@@ -21,10 +21,12 @@
             =link_to 'Home', 'index.html'
           %li
             %i.icon-music.icon-white
-            =link_to 'Learn more', 'learn-more.html'
+            -#=link_to 'Learn more', 'learn-more.html'
+            =link_to 'Learn more', '/#features'
           %li
             %i.icon-shopping-cart.icon-white
-            =link_to 'Buy', 'buy.html'
+            -#=link_to 'Buy', 'buy.html'
+            =link_to 'Buy', '/#buy'
           %li
             %i.icon-download-alt.icon-white
             =link_to 'Download', 'download.html'
@@ -34,13 +36,16 @@
       .span2
         %ul
           %li
+            %i.icon-twitter
             =link_to 'Twitter', 'https://twitter.com/HarmonEye'
+          %li
+            %i.icon-facebook
+            =link_to 'Facebook', 'https://www.facebook.com/HarmonEye'
           %li
             =link_to 'YouTube', 'http://www.youtube.com/user/HarmonEyeApp'
       .span4
-        / %h3 Tweets
         <a class="twitter-timeline" href="https://twitter.com/HarmonEye" data-widget-id="326397702822821888" data-tweet-limit="3" data-chrome="noheader nofooter transparent" data-theme="dark" data-link-color="#8cc000">Tweets by @HarmonEye</a>
-        / <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
       .about.span3.offset1
         %p
