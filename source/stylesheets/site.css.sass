@@ -56,6 +56,23 @@ $yellowgreen: #8cc000
       margin-top: 1em
       a
         margin-left: 0.75em
+    .discount
+      display: block
+      padding: 20px
+      margin-top: 20px
+      background: $yellowgreen
+      color: #eee
+      text-align: center
+      font-size: 200%
+      @include border-radius(10px)
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5)
+      @include box-shadow(0 0 10px rgba(0, 0, 0, 0.25))
+      border: 1px solid darken($yellowgreen, 5%)
+      .strong
+        color: #fff
+    .discount:hover
+      background: darken($yellowgreen, 2%)
+      text-decoration: none
     .share
       margin-top: 2em
       text-align: center
