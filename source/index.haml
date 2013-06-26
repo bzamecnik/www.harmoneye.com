@@ -31,8 +31,8 @@ layout: layout
         %a.btn.btn-buy.btn-large{:href => "#buy"}
           %i.icon-heart.icon-white
           Buy
-      %a.discount{href:"#buy", title: "Find out why..."}
-        Today just for <strong>$1</strong>!
+      -#%a.discount{href:"#buy", title: "Find out why..."}
+      -#  Today just for <strong>$1</strong>!
       .share
         -# Twitter button
         <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
@@ -205,18 +205,19 @@ layout: layout
         %p
           Finally, stay in touch and enjoy!
         
-        .alert.alert-success
-          :markdown
-            On **26th June 2013** just for **$1**!
-            
-            Save **$14** (that is about ~**93%**) in the honor of the 100th birth aniversary of **[Maurice Wilkes](https://en.wikipedia.org/wiki/Maurice_Wilkes)**, a British computer sciencist.
+        -#.alert.alert-success
+        -#  :markdown
+        -#    On **26th June 2013** just for **$1**!
+        -#    
+        -#    Save **$14** (that is about ~**93%**) in the honor of the 100th birth aniversary of **[Maurice Wilkes](https://en.wikipedia.org/wiki/Maurice_Wilkes)**, a British computer sciencist.
 
       .span4.text-center
         %a.btn.btn-buy.btn-large{:href => "https://sites.fastspring.com/fairos/instant/harmoneye", :target => "_blank", :title => "Continue to the eshop..."}
           =image_tag('harmoneye-e-major-7.png')
           %i.icon-heart.icon-white
           %strong Buy it
-          for just a few bucks (<del>$15</del> <strong>$1</strong>).
+          -#for just a few bucks (<del>$15</del> <strong>$1</strong>).
+          for just a few bucks ($15).
 
   .well
     .row
