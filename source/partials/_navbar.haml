@@ -11,12 +11,12 @@
               Home
           %li{:class => data.page.name == 'learn-more' ? 'active' : ''}
             -#%a(href="/learn-more")
-            %a{:href => (data.page.name != 'index' ? "/" : "") + "#features"}
+            %a.features{:href => (data.page.name != 'index' ? "/" : "") + "#features"}
               %i.icon-music
               Learn more
           %li{:class => data.page.name == 'buy' ? 'active' : ''}
             -#%a(href="/buy")
-            %a{:href => (data.page.name != 'index' ? "/" : "") + "#buy"}
+            %a.buy{:href => (data.page.name != 'index' ? "/" : "") + "#buy"}
               %i.icon-heart
               Buy
           %li{:class => data.page.name == 'download' ? 'active' : ''}

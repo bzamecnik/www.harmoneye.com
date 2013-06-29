@@ -6,7 +6,7 @@ layout: layout
 .container
   .intro.row
     .illustration.span7
-      %a{:href => "#features", :title => 'This is the E maj7 chord. Why? Get started and learn more...'}
+      %a.screenshot{:href => "#features", :title => 'This is the E maj7 chord. Why? Get started and learn more...'}
         .mac-screenshot
           =image_tag('harmoneye-e-major-7.png')
     .description.span4
@@ -25,13 +25,13 @@ layout: layout
         From **any audio**. In **real-time**.
 
       %p.buttons
-        %a.btn.btn-primary.btn-large{:href => "#features"}
+        %a.btn.btn-primary.btn-large.get-started-button{:href => "#features"}
           Get started
           %i.icon-chevron-right.icon-white
-        %a.btn.btn-buy.btn-large{:href => "#buy"}
+        %a.btn.btn-buy.btn-large.buy-button{:href => "#buy"}
           %i.icon-heart.icon-white
           Buy
-      -#%a.discount{href:"#buy", title: "Find out why..."}
+      -#%a.discount-button{href:"#buy", title: "Find out why..."}
       -#  Today just for <strong>$1</strong>!
       .share
         -# Twitter button
@@ -39,7 +39,7 @@ layout: layout
           Tweet
         -# Facebook button
         .fb-like{'data-href'=>"https://www.facebook.com/HarmonEye", 'data-send'=>"false", 'data-layout'=>"button_count", 'data-width'=>"450", 'data-show-faces'=>"false"}
-        
+
 %a.fragment{:name => "features", :id => "features"}
 
 .tagline
@@ -212,14 +212,14 @@ layout: layout
         -#    Save **$14** (that is about ~**93%**) in the honor of the 100th birth aniversary of **[Maurice Wilkes](https://en.wikipedia.org/wiki/Maurice_Wilkes)**, a British computer sciencist.
 
       .span4.text-center
-        %a.btn.btn-buy.btn-large{:href => "https://sites.fastspring.com/fairos/instant/harmoneye", :target => "_blank", :title => "Continue to the eshop..."}
+        %a.btn.btn-buy.btn-large.buy-in-eshop-button.cross-domain-href.has-ga-event{:href => "https://sites.fastspring.com/fairos/instant/harmoneye", :target => "_blank", :title => "Continue to the eshop..."}
           =image_tag('harmoneye-e-major-7.png')
           %i.icon-heart.icon-white
           %strong Buy it
           -#for just a few bucks (<del>$15</del> <strong>$1</strong>).
           for just a few bucks ($15).
 
-  .well
+  .well.stay-in-touch
     .row
       .span4
         %h3
@@ -229,7 +229,7 @@ layout: layout
           <a href="https://twitter.com/harmoneye" class="twitter-follow-button" data-show-count="false">Follow @harmoneye</a>
       .span4
         %p
-          %a.btn.btn-large.btn-success{:href=>"http://eepurl.com/xX1M1", :title => "Opens up a page to subscribe to newslletter - via MailChimp"}
+          %a.btn.btn-large.btn-success.newsletter-signup-button{:href=>"http://eepurl.com/xX1M1", :target => "_blank", :title => "Opens up a page to subscribe to newslletter - via MailChimp"}
             %i.icon-envelope.icon-white
             Notify me via email
         %p when important things happen from time to time.

@@ -2,17 +2,16 @@
 title: Download
 name: download
 installer_href: http://repo.harmoneye.com/mac/harmoneye-1.0.pkg
+app_version: 1.0
 ---
 
-.row
-
+.row.download-harmoneye
   .span8
-
     %p
-      %a.btn.btn-primary.btn-large{:href => data.page.installer_href}
+      %a.btn.btn-primary.btn-large.download-button{:href => data.page.installer_href, 'data-version' => data.page.app_version, 'data-platform' => 'macosx'}
         %i.icon-download-alt.icon-white
         Download HarmonEye 1.0 for Mac OS X
-      %a.btn.btn-success.btn-large{:href => "/#buy"}
+      %a.btn.btn-success.btn-large.buy-button{:href => "/#buy"}
         %i.icon-key.icon-white
         Buy a license
 
@@ -70,10 +69,10 @@ installer_href: http://repo.harmoneye.com/mac/harmoneye-1.0.pkg
       
       It is freely available from the creators of the famous Max audio application. Soundflower works nicely on Mountain Lion and some older Mac OS X versions.
 
-.row
+.row.soundflower
   .span4
     %p
-      %a.btn.btn-primary.btn-large{:href=>"http://cycling74.com/products/soundflower/"}
+      %a.btn.btn-primary.btn-large.download-button{:href=>"http://cycling74.com/products/soundflower/"}
         %i.icon-download-alt.icon-white
         Download Soundflower (free)
     %p Installing Soundflower is quite easy. You can just follow a very straightforward video tutorial.
