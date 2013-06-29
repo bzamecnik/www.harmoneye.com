@@ -35,10 +35,10 @@ layout: layout
       -#  Today just for <strong>$1</strong>!
       .share
         -# Twitter button
-        <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        %a.twitter-share-button{:href=>"https://twitter.com/share", 'data-url'=>"http://harmoneye.com/", 'data-hashtags'=>"harmoneye"}
+          Tweet
         -# Facebook button
-        <div class="fb-like" data-href="https://www.facebook.com/HarmonEye" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+        .fb-like{'data-href'=>"https://www.facebook.com/HarmonEye", 'data-send'=>"false", 'data-layout'=>"button_count", 'data-width'=>"450", 'data-show-faces'=>"false"}
         
 %a.fragment{:name => "features", :id => "features"}
 
@@ -227,7 +227,6 @@ layout: layout
           Stay in touch
         %p
           <a href="https://twitter.com/harmoneye" class="twitter-follow-button" data-show-count="false">Follow @harmoneye</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       .span4
         %p
           %a.btn.btn-large.btn-success{:href=>"http://eepurl.com/xX1M1", :title => "Opens up a page to subscribe to newslletter - via MailChimp"}
@@ -239,12 +238,4 @@ layout: layout
         %p I hate spam as you do. The traffic should be low and you can unsubscribe anytime.
         %p We trust the <a href="http://mailchimp.com/">MailChimp</a> service.
 
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) return;
-js = d.createElement(s); js.id = id;
-js.src = "//connect.facebook.net/cs_CZ/all.js#xfbml=1";
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+#fb-root
