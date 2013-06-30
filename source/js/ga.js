@@ -61,6 +61,9 @@ $(document).ready(function(){
 	$(".intro a.buy-button").click(function(event){
 		addGaEvent($(this), ['button', 'buy', 'intro-button']);
 	});
+	$(".intro a.trial-button").click(function(event){
+		addGaEvent($(this), ['button', 'trial', 'intro-button']);
+	});
 	$(".intro a.discount-button").click(function(event){
 		addGaEvent($(this), ['button', 'buy', 'intro-discount']);
 	});
