@@ -69,7 +69,6 @@ $(document).ready(function(){
 	});
 	$(".how-to-get-it a.buy-in-eshop-button").click(function(event){
 		addGaEvent($(this), ['button', 'buy-in-eshop']);
-		console.log('event: .how-to-get-it a.buy-in-eshop-button');
 	});
 	$(".stay-in-touch a.newsletter-signup-button").click(function(event){
 		addGaEvent($(this), ['button', 'newsletter-signup']);
