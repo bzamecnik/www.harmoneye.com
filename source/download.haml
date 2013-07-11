@@ -1,8 +1,8 @@
 ---
 title: Download
 name: download
-installer_href: http://repo.harmoneye.com/mac/harmoneye-1.1.pkg
-app_version: 1.1
+installer_href: http://repo.harmoneye.com/mac/harmoneye-1.1.1.pkg
+app_version: 1.1.1
 ---
 
 .row.download-harmoneye
@@ -10,7 +10,9 @@ app_version: 1.1
     %p
       %a.btn.btn-primary.btn-large.download-button{:href => data.page.installer_href, 'data-version' => data.page.app_version, 'data-platform' => 'macosx'}
         %i.icon-download-alt.icon-white
-        Download HarmonEye 1.1 for Mac OS X
+        Download HarmonEye
+        = data.page.app_version
+        for Mac OS X
       %a.btn.btn-success.btn-large.buy-button{:href => "/#buy"}
         %i.icon-key.icon-white
         Buy a license
