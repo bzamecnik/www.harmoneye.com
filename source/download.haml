@@ -56,10 +56,16 @@ app_version: 1.1.1
         Questions
       %p Do you have any problem? If you didn't find an answer on the website or especially in the <a href="#faq" title="Frequently asked questions">FAQ</a>, feel free to ask via the <a href="mailto:harmoneye.app@gmail.com">email support</a>.
       
-      %h3 Reviews
+      %h3
+        %i.icon-ok
+        Reviews
       %p.text-center
         %a{:href => 'http://mac.softpedia.com/get/Audio/HarmonEye.shtml', :title => 'Read the review at SoftPedia'}
           =image_tag('http://mac.softpedia.com/base_img/softpedia_clean_award_f.gif')
+
+%a.fragment{:name => "faq", :id => "faq"}
+%h2
+  FAQ - Frequently asked questions
 
 %h3
   %i.icon-volume-up
@@ -93,12 +99,8 @@ app_version: 1.1.1
   
     <iframe width="560" height="315" src="http://www.youtube.com/embed/4WU0LR2Iz1I" frameborder="0" allowfullscreen></iframe>
 
-%a.fragment{:name => "faq", :id => "faq"}
-%h2
-  FAQ - Frequently asked questions
-
+%h3 Why the application is not yet signed or on App Store?
 .well
-  %h3 Why the application is not yet signed or on App Store?
   .row
     .span4
       %p You don't need to be worried. HarmonEye doesn't contain anything bad inside. I just didn't manage yet to obtain the Developer Account and certificate for the application from Apple. It is quite a non-trivial process. I'm planning to get the the application signed.
