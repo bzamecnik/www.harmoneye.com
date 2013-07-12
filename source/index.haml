@@ -2,6 +2,11 @@
 title: HarmonEye
 name: "index"
 layout: layout
+price:
+  normal: 15
+  discount: 2
+trial:
+  days: 14
 ---
 .container
   .intro.row
@@ -27,18 +32,18 @@ layout: layout
         **Try** it for **free** now.
 
       %p.buttons
-        %a.btn.btn-primary.btn-large.get-started-button{:href => "#features"}
+        %a.btn.btn-primary.btn-large.get-started-button{:href => "#features", :title => "Learn in a few minutes what is it all about"}
           Get started
           %i.icon-chevron-right.icon-white
-      %p.buttons
-        %a.btn.btn-large.trial-button{:href => "/download"}
+        %a.btn.btn-large.trial-button{:href => "/download", :title => "Download a fully functional #{data.page.trial.days}-day trial"}
           %i.icon-download-alt
           Try
-        %a.btn.btn-buy.btn-large.buy-button{:href => "#buy"}
-          %i.icon-heart.icon-white
-          Buy
-      -#%a.discount-button{href:"#buy", title: "Find out why..."}
-      -#  Today just for <strong>$1</strong>!
+      -#%p.buttons
+      -#  %a.btn.btn-buy.btn-large.buy-button{:href => "#buy"}
+      -#    %i.icon-heart.icon-white
+      -#    Buy
+      %a.btn-discount.buy-button{href:"#buy", title: "Find out why..."}
+        = "Today just for <strong>$#{data.page.price.discount}</strong>!"
       .share
         -# Twitter button
         %a.twitter-share-button{:href=>"https://twitter.com/share", 'data-url'=>"http://harmoneye.com/", 'data-hashtags'=>"harmoneye"}
@@ -189,9 +194,10 @@ layout: layout
         Enjoy and support a good thing.
     .row
       .span4
+        %p
+          A good way to get HarmonEye running on your machine is to <strong><a href="/download/">download</a></strong> the package, install it and <strong>buy the license</strong> in order to activate it.
+          ="You can also <strong>try it for free</strong> for <strong>#{data.page.trial.days} days</strong>."
         :markdown
-          A good way to get HarmonEye running on your machine is to **<a href="download">download</a>** the package, install it and **buy the license** in order to activate it. You can also try it for free.
-          
           For a few bucks that you might spend on a single party night it will allow you to use HarmonEye until the end of days.
           
           Note that HarmonEye is presently available **only** for **Mac OS X** desktop.
@@ -199,9 +205,9 @@ layout: layout
           %i.icon-desktop.icon-4x.computer-icon
           %i.icon-laptop.icon-4x.computer-icon
         %p Why HarmonEye is not free, open-source, for mobiles or other platforms? I'd love it to be so, too! It just takes some time and work.
-      .span4
+
         %p Well, there is just a single person spending nights on crafting this thing, who needs something to eat and somewhere to sleep.
-          
+      .span4          
         %p Every buck earned goes directly to making HarmonEye better!
 
         -#%p Would you like the software and cannot afford it? Well, I'm not mean. Instead of money you can spend just a bit of time and effort and consequently <a href="/buy/#free-license">get a license for free</a>.
@@ -211,45 +217,37 @@ layout: layout
         %p
           Finally, stay in touch and enjoy!
         
+        .alert.alert-success
+          %p= "On <strong>13th July 2013</strong> just for <strong>$#{data.page.price.discount}</strong>."
+          %p= "Save <strong>$#{data.page.price.normal - data.page.price.discount}</strong> (that is about <strong>#{((data.page.price.normal - data.page.price.discount)*100.0/data.page.price.normal).round()}%</strong>) in the honor of <strong><a href=\"http://en.wikipedia.org/wiki/Arnold_Schoenberg\">Arnold Schoenberg</a></strong>, an Austrian composer and music theorist."
+        
         .text-center
           %a{:href => 'http://mac.softpedia.com/get/Audio/HarmonEye.shtml', :title => 'Read the review at SoftPedia'}
             =image_tag('http://mac.softpedia.com/base_img/softpedia_clean_award_f.gif')
+
+      .span4
+        %p.text-center
+          %a.btn.btn-buy.btn-large.buy-in-eshop-button.cross-domain-href.has-ga-event{:href => "https://sites.fastspring.com/fairos/instant/harmoneye", :target => "_blank", :title => "Continue to the eshop..."}
+            =image_tag('harmoneye-e-major-7.png')
+            %i.icon-heart.icon-white
+            %strong= "Buy it for just a few bucks (<del>$#{data.page.price.normal}</del> <strong>$#{data.page.price.discount}</strong>)."
+            -#for just a few bucks ($15).
+        %p We trust the amazing <a href="http://www.fastspring.com/">FastSpring</a> e-commerce platform. You can pay via several payment methods even in your currency.
         
-        -#.alert.alert-success
-        -#  :markdown
-        -#    On **26th June 2013** just for **$1**!
-        -#    
-        -#    Save **$14** (that is about ~**93%**) in the honor of the 100th birth aniversary of **[Maurice Wilkes](https://en.wikipedia.org/wiki/Maurice_Wilkes)**, a British computer sciencist.
-
-      .span4.text-center
-        %a.btn.btn-buy.btn-large.buy-in-eshop-button.cross-domain-href.has-ga-event{:href => "https://sites.fastspring.com/fairos/instant/harmoneye", :target => "_blank", :title => "Continue to the eshop..."}
-          =image_tag('harmoneye-e-major-7.png')
-          %i.icon-heart.icon-white
-          %strong Buy it
-          -#for just a few bucks (<del>$15</del> <strong>$1</strong>).
-          for just a few bucks ($15).
-
   .well.stay-in-touch
     .row
       .span4
-        %h3
+        %h3.muted
           %i.icon-rss-sign
           Stay in touch
         %p
           <a href="https://twitter.com/harmoneye" class="twitter-follow-button" data-show-count="false">Follow @harmoneye</a>
-        %p
-          <script type="text/javascript" src="http://osx.iusethis.com/app/include/harmoneye/2"></script>
-          <noscript>
-          <a href="http://osx.iusethis.com/app/">Support HarmonEye on iusethis</a>
-          </noscript>
-        %p
-          <script type='text/javascript' src='http://www.macupdate.com/developers/badge/48565'></script>
       .span4
         %p
-          %a.btn.btn-large.btn-success.newsletter-signup-button{:href=>"http://eepurl.com/xX1M1", :target => "_blank", :title => "Opens up a page to subscribe to newslletter - via MailChimp"}
+          %a.btn.btn-success.newsletter-signup-button{:href=>"http://eepurl.com/xX1M1", :target => "_blank", :title => "Opens up a page to subscribe to newslletter - via MailChimp"}
             %i.icon-envelope.icon-white
             Notify me via email
-        %p when important things happen from time to time.
+        when important things happen from time to time.
         %p Such as when we make a ground-breaking update or publish some interesting articles on music theory and practice.
       .span3
         %p I hate spam as you do. The traffic should be low and you can unsubscribe anytime.

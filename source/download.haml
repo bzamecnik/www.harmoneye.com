@@ -10,9 +10,7 @@ app_version: 1.1.1
     %p
       %a.btn.btn-primary.btn-large.download-button{:href => data.page.installer_href, 'data-version' => data.page.app_version, 'data-platform' => 'macosx'}
         %i.icon-download-alt.icon-white
-        Download HarmonEye
-        = data.page.app_version
-        for Mac OS X
+        ="Download HarmonEye #{data.page.app_version} for Mac OS X"
       %a.btn.btn-success.btn-large.buy-button{:href => "/#buy"}
         %i.icon-key.icon-white
         Buy a license
@@ -34,12 +32,9 @@ app_version: 1.1.1
         1. Select the destination folder (usually `/Applications`).
         1. Complete the installation.
         1. Run the `HarmonEye` application, eg. via Spotlight.
-        1. Enter the activation key that is sent to you via email after you make the order. Or try it for free for up to 14 days.
+        1. Enter the activation key that is sent to you via email after you make the order.
+        1. Or try it for free for up to 14 days.
         1. Enjoy!
-
-    %h4
-      %i.icon-list
-      =link_to("Changelog and older releases", "/changelog/")
 
   .span4
     .well
@@ -55,13 +50,11 @@ app_version: 1.1.1
         %i.icon-question-sign
         Questions
       %p Do you have any problem? If you didn't find an answer on the website or especially in the <a href="#faq" title="Frequently asked questions">FAQ</a>, feel free to ask via the <a href="mailto:harmoneye.app@gmail.com">email support</a>.
-      
+
       %h3
-        %i.icon-ok
-        Reviews
-      %p.text-center
-        %a{:href => 'http://mac.softpedia.com/get/Audio/HarmonEye.shtml', :title => 'Read the review at SoftPedia'}
-          =image_tag('http://mac.softpedia.com/base_img/softpedia_clean_award_f.gif')
+        %i.icon-list
+        Changelog
+      %p=link_to("Changelog and older releases", "/changelog/")
 
 %a.fragment{:name => "faq", :id => "faq"}
 %h2
@@ -109,3 +102,16 @@ app_version: 1.1.1
     .span3
       %p As a developer you cannot use your own licensing strategy, including free licenses for special purposes, multi-platform licenses, etc.
       %p Instead I've chosen <a href="http://www.fastspring.com/">FastSpring</a> as the distributor and we'll see. It seems excelent!
+
+.row.badges
+  .span4
+    <script type='text/javascript' src='http://www.macupdate.com/developers/badge/48565'></script>
+  .span4
+    %p.text-center
+      %a{:href => 'http://mac.softpedia.com/get/Audio/HarmonEye.shtml', :title => 'Read the review at SoftPedia'}
+        =image_tag('http://mac.softpedia.com/base_img/softpedia_clean_award_f.gif')
+  .span4
+    <script type="text/javascript" src="http://osx.iusethis.com/app/include/harmoneye/2"></script>
+    <noscript>
+    <a href="http://osx.iusethis.com/app/">Support HarmonEye on iusethis</a>
+    </noscript>
