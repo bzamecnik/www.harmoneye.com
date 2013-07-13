@@ -38,12 +38,12 @@ trial:
         %a.btn.btn-large.trial-button{:href => "/download", :title => "Download a fully functional #{data.page.trial.days}-day trial"}
           %i.icon-download-alt
           Try
-      -#%p.buttons
-      -#  %a.btn.btn-buy.btn-large.buy-button{:href => "#buy"}
-      -#    %i.icon-heart.icon-white
-      -#    Buy
-      %a.btn-discount.buy-button{href:"#buy", title: "Find out why..."}
-        = "Today just for <strong>$#{data.page.price.discount}</strong>!"
+      %p.buttons
+        %a.btn.btn-buy.btn-large.buy-button{:href => "#buy"}
+          %i.icon-heart.icon-white
+          Buy
+      -#%a.btn-discount.buy-button{href:"#buy", title: "Find out why..."}
+      -#  = "Today just for <strong>$#{data.page.price.discount}</strong>!"
       .share
         -# Twitter button
         %a.twitter-share-button{:href=>"https://twitter.com/share", 'data-url'=>"http://harmoneye.com/", 'data-hashtags'=>"harmoneye"}
@@ -205,9 +205,9 @@ trial:
           %i.icon-desktop.icon-4x.computer-icon
           %i.icon-laptop.icon-4x.computer-icon
         %p Why HarmonEye is not free, open-source, for mobiles or other platforms? I'd love it to be so, too! It just takes some time and work.
-
+      .span4
         %p Well, there is just a single person spending nights on crafting this thing, who needs something to eat and somewhere to sleep.
-      .span4          
+  
         %p Every buck earned goes directly to making HarmonEye better!
 
         -#%p Would you like the software and cannot afford it? Well, I'm not mean. Instead of money you can spend just a bit of time and effort and consequently <a href="/buy/#free-license">get a license for free</a>.
@@ -217,9 +217,9 @@ trial:
         %p
           Finally, stay in touch and enjoy!
         
-        .alert.alert-success
-          %p= "On <strong>13th July 2013</strong> just for <strong>$#{data.page.price.discount}</strong>."
-          %p= "Save <strong>$#{data.page.price.normal - data.page.price.discount}</strong> (that is about <strong>#{((data.page.price.normal - data.page.price.discount)*100.0/data.page.price.normal).round()}%</strong>) in the honor of <strong><a href=\"http://en.wikipedia.org/wiki/Arnold_Schoenberg\">Arnold Schoenberg</a></strong>, an Austrian composer and music theorist."
+        -#.alert.alert-success
+        -#  %p= "On <strong>13th July 2013</strong> just for <strong>$#{data.page.price.discount}</strong>."
+        -#  %p= "Save <strong>$#{data.page.price.normal - data.page.price.discount}</strong> (that is about <strong>#{((data.page.price.normal - data.page.price.discount)*100.0/data.page.price.normal).round()}%</strong>) in the honor of <strong><a href=\"http://en.wikipedia.org/wiki/Arnold_Schoenberg\">Arnold Schoenberg</a></strong>, an Austrian composer and music theorist."
         
         .text-center
           %a{:href => 'http://mac.softpedia.com/get/Audio/HarmonEye.shtml', :title => 'Read the review at SoftPedia'}
@@ -230,8 +230,9 @@ trial:
           %a.btn.btn-buy.btn-large.buy-in-eshop-button.cross-domain-href.has-ga-event{:href => "https://sites.fastspring.com/fairos/instant/harmoneye", :target => "_blank", :title => "Continue to the eshop..."}
             =image_tag('harmoneye-e-major-7.png')
             %i.icon-heart.icon-white
-            %strong= "Buy it for just a few bucks (<del>$#{data.page.price.normal}</del> <strong>$#{data.page.price.discount}</strong>)."
-            -#for just a few bucks ($15).
+            %strong
+              -#= "Buy it for just a few bucks (<del>$#{data.page.price.normal}</del> <strong>$#{data.page.price.discount}</strong>)."
+              for just a few bucks ($15).
         %p We trust the amazing <a href="http://www.fastspring.com/">FastSpring</a> e-commerce platform. You can pay via several payment methods even in your currency.
         
   .well.stay-in-touch
