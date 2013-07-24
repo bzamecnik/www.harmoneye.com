@@ -4,7 +4,7 @@ name: "index"
 layout: layout
 price:
   normal: 15
-  discount: 2
+  discount: 5
 trial:
   days: 14
 ---
@@ -38,12 +38,13 @@ trial:
         %a.btn.btn-large.trial-button{:href => "/download", :title => "Download a fully functional #{data.page.trial.days}-day trial"}
           %i.icon-download-alt
           Try
+      -#%p.buttons
+      -#  %a.btn.btn-buy.btn-large.buy-button{:href => "#buy"}
+      -#    %i.icon-heart.icon-white
+      -#    Buy
       %p.buttons
-        %a.btn.btn-buy.btn-large.buy-button{:href => "#buy"}
-          %i.icon-heart.icon-white
-          Buy
-      -#%a.btn-discount.buy-button{href:"#buy", title: "Find out why..."}
-      -#  = "Today just for <strong>$#{data.page.price.discount}</strong>!"
+        %a.btn-discount.buy-button{href:"#buy", title: "Find out what're celebrating..."}
+          = "Today just for <strong>$#{data.page.price.discount}</strong>!"
       .share
         -# Twitter button
         %a.twitter-share-button{:href=>"https://twitter.com/share", 'data-url'=>"http://harmoneye.com/", 'data-hashtags'=>"harmoneye"}
@@ -217,9 +218,9 @@ trial:
         %p
           Finally, stay in touch and enjoy!
         
-        -#.alert.alert-success
-        -#  %p= "On <strong>13th July 2013</strong> just for <strong>$#{data.page.price.discount}</strong>."
-        -#  %p= "Save <strong>$#{data.page.price.normal - data.page.price.discount}</strong> (that is about <strong>#{((data.page.price.normal - data.page.price.discount)*100.0/data.page.price.normal).round()}%</strong>) in the honor of <strong><a href=\"http://en.wikipedia.org/wiki/Arnold_Schoenberg\">Arnold Schoenberg</a></strong>, an Austrian composer and music theorist."
+        .alert.alert-success
+          %p= "On <strong>24th July 2013</strong> just for <strong>$#{data.page.price.discount}</strong>."
+          %p= "Save <strong>$#{data.page.price.normal - data.page.price.discount}</strong> (that is about <strong>#{((data.page.price.normal - data.page.price.discount)*100.0/data.page.price.normal).round()}%</strong>) in the honor of <strong><a href=\"http://en.wikipedia.org/wiki/Alfons_Mucha\">Alfons Mucha</a></strong>, a Czech Art Nouveau painter."
         
         .text-center
           %a{:href => 'http://mac.softpedia.com/get/Audio/HarmonEye.shtml', :title => 'Read the review at SoftPedia'}
@@ -231,8 +232,9 @@ trial:
             =image_tag('harmoneye-e-major-7.png')
             %i.icon-heart.icon-white
             %strong
-              -#= "Buy it for just a few bucks (<del>$#{data.page.price.normal}</del> <strong>$#{data.page.price.discount}</strong>)."
-              for just a few bucks ($15).
+              Buy it for 
+              = "just a few bucks (<del>$#{data.page.price.normal}</del> <strong>$#{data.page.price.discount}</strong>)."
+              -#for just a few bucks ($15).
         %p We trust the amazing <a href="http://www.fastspring.com/">FastSpring</a> e-commerce platform. You can pay via several payment methods even in your currency.
         
   .well.stay-in-touch
