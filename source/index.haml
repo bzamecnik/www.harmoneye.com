@@ -3,7 +3,7 @@ title: HarmonEye
 name: "index"
 layout: layout
 price:
-  normal: 15
+  normal: 5
   discount: 5
 trial:
   days: 14
@@ -234,7 +234,7 @@ trial:
             %strong
               Buy it for 
               -#= "just a few bucks (<del>$#{data.page.price.normal}</del> <strong>$#{data.page.price.discount}</strong>)."
-              for just a few bucks ($15).
+              ="for just a few bucks ($#{data.page.price.normal})."
         %p We trust the amazing <a href="http://www.fastspring.com/">FastSpring</a> e-commerce platform. You can pay via several payment methods even in your currency.
         
   .well.stay-in-touch
