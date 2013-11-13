@@ -23,25 +23,30 @@ trial:
         %i.icon-eye-open
         See what you hear!
       
-      // Sem by slo supnout carousel, ktery by opakovat hlavni fraze z features.
+      -# Sem by slo supnout carousel, ktery by opakovat hlavni fraze z features.
       :markdown
         What looks like a retina of an eye is a unique software application that listens to the **music** and shows you the **tones** and **chords** being played.
       
         From **any audio**. In **real-time**.
         
-        **Try** it for **free** now.
+        **Get** it now. And hey, it's **free**!
 
       %p.buttons
         %a.btn.btn-primary.btn-large.get-started-button{:href => "#features", :title => "Learn in a few minutes what is it all about"}
           Get started
           %i.icon-chevron-right.icon-white
-        %a.btn.btn-large.trial-button{:href => "/download", :title => "Download a fully functional #{data.page.trial.days}-day trial"}
+        %a.btn.btn-large.download-button{:href => "/download", :title => "Download full version of HarmonEye"}
           %i.icon-download-alt
-          Try
-      %p.buttons
-        %a.btn.btn-buy.btn-large.buy-button{:href => "#buy"}
-          %i.icon-heart.icon-white
-          Buy
+          Download
+        .text-center
+          =partial "partials/paypal"
+      -#  %a.btn.btn-large.trial-button{:href => "/download", :title => "Download a fully functional #{data.page.trial.days}-day trial"}
+      -#    %i.icon-download-alt
+      -#    Try
+      -#%p.buttons
+      -#  %a.btn.btn-buy.btn-large.buy-button{:href => "#buy"}
+      -#    %i.icon-heart.icon-white
+      -#    Buy
       -#%p.buttons
       -#  %a.btn-discount.buy-button{href:"#buy", title: "Find out what're celebrating..."}
       -#    = "Today just for <strong>$#{data.page.price.discount}</strong>!"
@@ -196,47 +201,42 @@ trial:
     .row
       .span4
         %p
-          A good way to get HarmonEye running on your machine is to <strong><a href="/download/">download</a></strong> the package, install it and <strong>buy the license</strong> in order to activate it.
-          ="You can also <strong>try it for free</strong> for <strong>#{data.page.trial.days} days</strong>."
+          A good way to get HarmonEye running on your machine is to <strong><a href="/download/">download</a></strong> the package.
         :markdown
-          For a few bucks that you might spend on a single party night it will allow you to use HarmonEye until the end of days.
+          It is for FREE.
           
           Note that HarmonEye is presently available **only** for **Mac OS X** desktop.
         .text-center
           %i.icon-desktop.icon-4x.computer-icon
           %i.icon-laptop.icon-4x.computer-icon
-        %p Why HarmonEye is not free, open-source, for mobiles or other platforms? I'd love it to be so, too! It just takes some time and work.
+        .text-center
+          %a{:href => 'http://mac.softpedia.com/get/Audio/HarmonEye.shtml', :title => 'Read the review at SoftPedia'}
+            =image_tag('http://mac.softpedia.com/base_img/softpedia_clean_award_f.gif')
+        
       .span4
-        %p Well, there is just a single person spending nights on crafting this thing, who needs something to eat and somewhere to sleep.
-  
-        %p Every buck earned goes directly to making HarmonEye better!
-
-        -#%p Would you like the software and cannot afford it? Well, I'm not mean. Instead of money you can spend just a bit of time and effort and consequently <a href="/buy/#free-license">get a license for free</a>.
-          
-        %p Would you like to support the development of HarmonEye in another way? God bless you! You can. Eg. tell your friends, make a video, write a review. Thanks!
-          
+        %p Why HarmonEye is not open-source, for mobiles or other platforms? I'd love it to be so, too! It just takes some time and work.
+        %p Would you like to support the development of HarmonEye? God bless you! You can donate via PayPal and/or tell your friends, make a video, write a review.
+        
+        .text-center
+          =partial "partials/paypal"
+        
+        %p Every buck goes directly to making HarmonEye better. Thanks!
+           
         %p
           Finally, stay in touch and enjoy!
+          %i.icon-heart
         
         -#.alert.alert-success
         -#  %p= "On <strong>24th July 2013</strong> just for <strong>$#{data.page.price.discount}</strong>."
         -#  %p= "Save <strong>$#{data.page.price.normal - data.page.price.discount}</strong> (that is about <strong>#{((data.page.price.normal - data.page.price.discount)*100.0/data.page.price.normal).round()}%</strong>) in the honor of <strong><a href=\"http://en.wikipedia.org/wiki/Alfons_Mucha\">Alfons Mucha</a></strong>, a Czech Art Nouveau painter."
         
-        .text-center
-          %a{:href => 'http://mac.softpedia.com/get/Audio/HarmonEye.shtml', :title => 'Read the review at SoftPedia'}
-            =image_tag('http://mac.softpedia.com/base_img/softpedia_clean_award_f.gif')
-
       .span4
         %p.text-center
-          %a.btn.btn-buy.btn-large.buy-in-eshop-button.cross-domain-href.has-ga-event{:href => "https://sites.fastspring.com/fairos/instant/harmoneye", :target => "_blank", :title => "Continue to the eshop..."}
+          %a.btn.btn-buy.btn-large.buy-in-eshop-button.has-ga-event{:href => "/download/"}
             =image_tag('harmoneye-e-major-7.png')
-            %i.icon-heart.icon-white
+            %i.icon-download-alt.icon-white
             %strong
-              Buy it for 
-              -#= "just a few bucks (<del>$#{data.page.price.normal}</del> <strong>$#{data.page.price.discount}</strong>)."
-              ="for just a few bucks ($#{data.page.price.normal})."
-        %p We trust the amazing <a href="http://www.fastspring.com/">FastSpring</a> e-commerce platform. You can pay via several payment methods even in your currency.
-        
+              Download for FREE
   .well.stay-in-touch
     .row
       .span4

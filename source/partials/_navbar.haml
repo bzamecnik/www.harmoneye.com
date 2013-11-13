@@ -14,11 +14,11 @@
             %a.features{:href => (data.page.name != 'index' ? "/" : "") + "#features"}
               %i.icon-music
               Learn more
-          %li{:class => data.page.name == 'buy' ? 'active' : ''}
-            -#%a(href="/buy")
-            %a.buy{:href => (data.page.name != 'index' ? "/" : "") + "#buy"}
-              %i.icon-heart
-              Buy
+          -#%li{:class => data.page.name == 'buy' ? 'active' : ''}
+          -#  -#%a(href="/buy")
+          -#  %a.buy{:href => (data.page.name != 'index' ? "/" : "") + "#buy"}
+          -#    %i.icon-heart
+          -#    Buy
           %li{:class => data.page.name == 'download' ? 'active' : ''}
             %a(href="/download")
               %i.icon-download-alt

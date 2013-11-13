@@ -1,8 +1,8 @@
 ---
 title: Download
 name: download
-installer_href: http://repo.harmoneye.com/mac/harmoneye-1.1.1.pkg
-app_version: 1.1.1
+installer_href: http://repo.harmoneye.com/mac/harmoneye-1.2.dmg
+app_version: 1.2
 ---
 
 .row.download-harmoneye
@@ -10,14 +10,17 @@ app_version: 1.1.1
     %p
       %a.btn.btn-primary.btn-large.download-button{:href => data.page.installer_href, 'data-version' => data.page.app_version, 'data-platform' => 'macosx'}
         %i.icon-download-alt.icon-white
-        ="Download HarmonEye #{data.page.app_version} for Mac OS X"
-      %a.btn.btn-success.btn-large.buy-button{:href => "/#buy"}
-        %i.icon-key.icon-white
-        Buy a license
+        ="Download HarmonEye #{data.page.app_version} for Mac OS X (FREE)"
+      -#%a.btn.btn-success.btn-large.buy-button{:href => "/#buy"}
+      -#  %i.icon-key.icon-white
+      -#  Buy a license
 
     :markdown
-      You can download the installation package for your platform and install HarmonEye anytime. You can **try it for free for 14 days**. Afterwards you need a license. You can easily buy it for a few bucks and thus support the development of new cool features.
-
+      Download the installation package and install HarmonEye, it is **FREE**!
+      
+      You can express your love by donating. Any amount helps making it better.
+      
+    =partial "partials/paypal"
     %h2
       %i.icon-cogs
       How to install?
@@ -28,12 +31,9 @@ app_version: 1.1.1
         1. Download the installation package via the link above.
         1. Make sure you have **[Java](http://java.com/)** installed.
         1. [Allow installing of unsigned applications outside AppStore.](https://www.my-private-network.co.uk/knowledge-base/apple-related-questions/osx-unsigned-apps.html)
-        1. Open the downloaded `.pkg` file to run the instaler.
-        1. Select the destination folder (usually `/Applications`).
-        1. Complete the installation.
+        1. Open the downloaded `.dmg` file.
+        1. Move the application to the `/Applications` folder if you wish.
         1. Run the `HarmonEye` application, eg. via Spotlight.
-        1. Enter the activation key that is sent to you via email after you make the order.
-        1. Or try it for free for up to 14 days.
         1. Enjoy!
 
   .span4
@@ -55,6 +55,19 @@ app_version: 1.1.1
         %i.icon-list
         Changelog
       %p=link_to("Changelog and older releases", "/changelog/")
+
+.row.badges
+  .span4
+    <script type='text/javascript' src='http://www.macupdate.com/developers/badge/48565'></script>
+  .span4
+    %p.text-center
+      %a{:href => 'http://mac.softpedia.com/get/Audio/HarmonEye.shtml', :title => 'Read the review at SoftPedia'}
+        =image_tag('http://mac.softpedia.com/base_img/softpedia_clean_award_f.gif')
+  .span4
+    <script type="text/javascript" src="http://osx.iusethis.com/app/include/harmoneye/2"></script>
+    <noscript>
+    <a href="http://osx.iusethis.com/app/">Support HarmonEye on iusethis</a>
+    </noscript>
 
 %a.fragment{:name => "faq", :id => "faq"}
 %h2
@@ -93,25 +106,4 @@ app_version: 1.1.1
     <iframe width="560" height="315" src="http://www.youtube.com/embed/4WU0LR2Iz1I" frameborder="0" allowfullscreen></iframe>
 
 %h3 Why the application is not yet signed or on App Store?
-.well
-  .row
-    .span4
-      %p You don't need to be worried. HarmonEye doesn't contain anything bad inside. I just didn't manage yet to obtain the Developer Account and certificate for the application from Apple. It is quite a non-trivial process. I'm planning to get the the application signed.
-    .span4
-      %p As for distributing via App Store, for now I'm not interested. Having the certificate is a necessary pre-requisite. Also Apple is more than a perfectionist to accepting new applications.
-    .span3
-      %p As a developer you cannot use your own licensing strategy, including free licenses for special purposes, multi-platform licenses, etc.
-      %p Instead I've chosen <a href="http://www.fastspring.com/">FastSpring</a> as the distributor and we'll see. It seems excelent!
-
-.row.badges
-  .span4
-    <script type='text/javascript' src='http://www.macupdate.com/developers/badge/48565'></script>
-  .span4
-    %p.text-center
-      %a{:href => 'http://mac.softpedia.com/get/Audio/HarmonEye.shtml', :title => 'Read the review at SoftPedia'}
-        =image_tag('http://mac.softpedia.com/base_img/softpedia_clean_award_f.gif')
-  .span4
-    <script type="text/javascript" src="http://osx.iusethis.com/app/include/harmoneye/2"></script>
-    <noscript>
-    <a href="http://osx.iusethis.com/app/">Support HarmonEye on iusethis</a>
-    </noscript>
+%p You don't need to be worried. HarmonEye doesn't contain anything bad inside. In fact, it has been certified by SoftPedia as clean from any malware. I'm just not planning to make a Developer Account for desktop applications.

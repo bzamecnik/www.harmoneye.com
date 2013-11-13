@@ -53,9 +53,9 @@ $(document).ready(function(){
 	
 	// == navbar ==
 
-	$(".navbar a.buy").click(function(event){
-		addGaEvent($(this), ['button', 'buy', 'navbar']);
-	});
+	// $(".navbar a.buy").click(function(event){
+	// 	addGaEvent($(this), ['button', 'buy', 'navbar']);
+	// });
 	
 	// == index ==
 	
@@ -65,18 +65,21 @@ $(document).ready(function(){
 	$(".intro a.screenshot").click(function(event){
 		addGaEvent($(this), ['button', 'get-started', 'intro-screenshot']);
 	});
-	$(".intro a.buy-button").click(function(event){
-		addGaEvent($(this), ['button', 'buy', 'intro-button']);
+	$(".intro a.download-button").click(function(event){
+		addGaEvent($(this), ['button', 'download', 'intro-button']);
 	});
-	$(".intro a.trial-button").click(function(event){
-		addGaEvent($(this), ['button', 'trial', 'intro-button']);
-	});
-	$(".intro a.discount-button").click(function(event){
-		addGaEvent($(this), ['button', 'buy', 'intro-discount']);
-	});
-	$(".how-to-get-it a.buy-in-eshop-button").click(function(event){
-		addGaEvent($(this), ['button', 'buy-in-eshop']);
-	});
+	// $(".intro a.buy-button").click(function(event){
+	// 	addGaEvent($(this), ['button', 'buy', 'intro-button']);
+	// });
+	// $(".intro a.trial-button").click(function(event){
+	// 	addGaEvent($(this), ['button', 'trial', 'intro-button']);
+	// });
+	// $(".intro a.discount-button").click(function(event){
+	// 	addGaEvent($(this), ['button', 'buy', 'intro-discount']);
+	// });
+	// $(".how-to-get-it a.buy-in-eshop-button").click(function(event){
+	// 	addGaEvent($(this), ['button', 'buy-in-eshop']);
+	// });
 	$(".stay-in-touch a.newsletter-signup-button").click(function(event){
 		addGaEvent($(this), ['button', 'newsletter-signup']);
 	});
@@ -89,8 +92,8 @@ $(document).ready(function(){
 		addGaEvent($(this), ['button', 'download', appId]);
 	});
 	
-	$(".download-harmoneye a.buy-button").click(function(event){
-		addGaEvent($(this), ['button', 'buy', 'download']);
-	});
+	// $(".download-harmoneye a.buy-button").click(function(event){
+	// 	addGaEvent($(this), ['button', 'buy', 'download']);
+	// });
 
 });
