@@ -39,7 +39,10 @@ trial:
           %i.icon-download-alt
           Download
         .text-center
-          =partial "partials/paypal"
+          %i.icon-desktop.icon-4x.computer-icon
+          %i.icon-mobile-phone.icon-4x
+        -#.text-center
+          -#=partial "partials/paypal"
       -#  %a.btn.btn-large.trial-button{:href => "/download", :title => "Download a fully functional #{data.page.trial.days}-day trial"}
       -#    %i.icon-download-alt
       -#    Try
@@ -205,10 +208,11 @@ trial:
         :markdown
           It is for FREE.
           
-          Note that HarmonEye is presently available **only** for **Mac OS X** desktop.
+          Note that HarmonEye is presently available both for Mac OS X desktop and Android.
         .text-center
           %i.icon-desktop.icon-4x.computer-icon
           %i.icon-laptop.icon-4x.computer-icon
+          %i.icon-mobile-phone.icon-4x
         .text-center
           %a{:href => 'http://mac.softpedia.com/get/Audio/HarmonEye.shtml', :title => 'Read the review at SoftPedia'}
             =image_tag('http://mac.softpedia.com/base_img/softpedia_clean_award_f.gif')

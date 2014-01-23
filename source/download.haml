@@ -8,9 +8,16 @@ app_version: 1.4
 .row.download-harmoneye
   .span8
     %p
+      %i.icon-mobile-phone.icon-4x
+        :markdown
+          <a href="https://play.google.com/store/apps/details?id=com.harmoneye.android">
+            <img alt="Android app on Google Play" src="https://developer.android.com/images/brand/en_app_rgb_wo_60.png" />
+          </a>
+    %p
+      %i.icon-desktop.icon-4x.computer-icon
       %a.btn.btn-primary.btn-large.download-button{:href => data.page.installer_href, 'data-version' => data.page.app_version, 'data-platform' => 'macosx'}
         %i.icon-download-alt.icon-white
-        ="Download HarmonEye #{data.page.app_version} for Mac OS X (FREE)"
+        ="HarmonEye #{data.page.app_version} for Mac OS X"
       -#%a.btn.btn-success.btn-large.buy-button{:href => "/#buy"}
       -#  %i.icon-key.icon-white
       -#  Buy a license
@@ -44,7 +51,7 @@ app_version: 1.4
         Platforms
 
       %p
-        Currently, HarmonEye is available <strong>only for Mac OS X</strong>. Other platforms is planned. The development takes some time, but you can support it.
+        Currently, HarmonEye is available <strong>Mac OS X</strong> and <strong>Android</strong>. Other platforms are planned. The development takes some time, but you can support it.
         
       %h3
         %i.icon-question-sign
